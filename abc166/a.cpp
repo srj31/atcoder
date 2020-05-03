@@ -14,9 +14,14 @@ typedef pair<ll,ll> pll;
 
 
 void solve(){
-	int n,m,q;
-	cin >> n >> m >>q;
-	 
+	string s;
+	cin >> s;
+	if(s=="ABC"){
+		cout << "ARC" << endl;
+	}
+	else{
+		cout << "ABC" << endl;
+	}
 }
 
 int main(){
@@ -26,6 +31,6 @@ int main(){
 		freopen("output.txt","w",stdout);
 	#endif
 
-	int t;cin >> t;while(t--)
+	// int t;cin >> t;while(t--)
 		solve();
 }

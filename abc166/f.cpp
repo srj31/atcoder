@@ -14,9 +14,7 @@ typedef pair<ll,ll> pll;
 
 
 void solve(){
-	int n,m,q;
-	cin >> n >> m >>q;
-	 
+	
 }
 
 int main(){

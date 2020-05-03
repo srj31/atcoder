@@ -14,9 +14,24 @@ typedef pair<ll,ll> pll;
 
 
 void solve(){
-	int n,m,q;
-	cin >> n >> m >>q;
-	 
+	int n,k;
+	cin >> n >> k;
+	map<int,int> has;
+	for(int i =0;i<k;i++){
+		int d;
+		cin >> d;
+		forn(j,0,d){
+			int a;
+			cin >> a;
+			has[a]++;
+		}
+	}
+	int ans =0 ;
+	for(int i =1;i<=n;i++){
+		if(has[i]==0)
+			ans++;
+	}
+	cout<< ans << endl;
 }
 
 int main(){
@@ -26,6 +41,6 @@ int main(){
 		freopen("output.txt","w",stdout);
 	#endif
 
-	int t;cin >> t;while(t--)
+	// int t;cin >> t;while(t--)
 		solve();
 }

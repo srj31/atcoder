@@ -14,9 +14,27 @@ typedef pair<ll,ll> pll;
 
 
 void solve(){
-	int n,m,q;
-	cin >> n >> m >>q;
-	 
+	int n,m;
+	cin >> n >> m;
+	vector<int> good(n+1,1);
+	vector<int> h(n+1);
+	forn(i,1,n+1){
+		cin >> h[i];
+	}
+
+	forn(i,0,m){
+		int u,v;
+		cin >> u >> v;
+		if(h[u]>=h[v])
+			good[v]=0;
+		if(h[v]>=h[u])
+			good[u] =0;
+	}
+	int count = 0;
+	for(int i =1;i<=n;i++){
+		if(good[i])count++;
+	}
+	cout << count << endl;
 }
 
 int main(){
@@ -26,6 +44,6 @@ int main(){
 		freopen("output.txt","w",stdout);
 	#endif
 
-	int t;cin >> t;while(t--)
+	// int t;cin >> t;while(t--)
 		solve();
 }
